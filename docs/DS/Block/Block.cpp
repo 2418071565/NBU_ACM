@@ -1,16 +1,5 @@
 // 以维护区间和为例，给出分块的基本代码
 
-#include <bits/stdc++.h>
-using namespace std;
-const int MAX = 5e5 + 100;
-typedef long long ll;
-
-ll a[MAX], b[MAX];
-int n, m;
-// st[i]代表第i个块开始的位置，ed[i]表示第i个块结束的位置
-int st[MAX], ed[MAX], pos[MAX];
-// add整块的增量，sum维护区间和
-ll add[MAX], sum[MAX];
 // block 块大小，t块个数
 int block, t;
 // 初始化分块
