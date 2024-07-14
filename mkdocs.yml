@@ -16,6 +16,8 @@ theme:
 nav:
   - ACM: 
     - 算法: 
+      - 二分:
+        - 整数二分: Algorithm/BinarySearch/Integer/Integer.md
       - 倍增: Algorithm/BinaryLifting/BinaryLifting.md
       - 排序: 
         - 冒泡排序: Algorithm/Sort/BubbleSort/Bubble.md
