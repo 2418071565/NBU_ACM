@@ -1,5 +1,5 @@
 repo_url: https://github.com/2418071565/2418071565.github.io.git
-site_name: Made By CYB
+site_name: NBU ACM
 
 copyright: "CopyRight &copy CYB"
 edit_uri: edit/master/docs
@@ -7,6 +7,8 @@ edit_uri: edit/master/docs
 nav:
   - 主页: index.md
   - 算法: 
+    - 二分:
+      - 整数二分: Algorithm/BinarySearch/Integer/Integer.md
     - 动态规划:
       - 背包问题: Algorithm/DP/Knapsack/Knapsack.md
     - 倍增: Algorithm/BinaryLifting/BinaryLifting.md
@@ -83,6 +85,7 @@ theme:
       code: material/note-alert
     logo: Web_icon
     repo: repo_icon
+
 
 
 markdown_extensions:
