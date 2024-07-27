@@ -4,7 +4,7 @@
 
 比如：在$[1，2，3，3，4]$这个数组中（见下图），用「**大于等于3**」这条性质划分出的区间为（后为下标，从1开始）：$[1~2]$和$[3~5]$。可以利用二分来确定下标为「2」的边界点（对应原数组中的2）和下标为「3」的边界点（对应原数组中左数第一个3）。
 
-![BinarySearch](/docs/Algorithm/BinarySearch/Integer/Img/BinarySearch.png "BinarySearch")
+![BinarySearch](./Img/BinarySearch.png "BinarySearch")
 
 ## **左侧的边界点**
 
