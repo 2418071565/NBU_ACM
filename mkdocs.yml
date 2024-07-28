@@ -7,8 +7,7 @@ edit_uri: edit/master/docs
 nav:
   - 主页: index.md
   - 算法: 
-    - 二分:
-      - 整数二分: Algorithm/BinarySearch/Integer/Integer.md
+    - 二分: Algorithm/BinarySearch/BinarySearch.md
     - 动态规划:
       - 背包问题: Algorithm/DP/Knapsack/Knapsack.md
     - 倍增: Algorithm/BinaryLifting/BinaryLifting.md
