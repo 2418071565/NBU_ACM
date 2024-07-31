@@ -37,6 +37,7 @@ nav:
       - 吉如一线段树: DS/SegTr/JRYSegTr.md
   - 图论: 
     - 图的存储: Graph/StorageOfGraphs/Storage.md
+    - 图的遍历: Graph/TraversalOfGraphs/Traversal.md
     - 拓朴排序: Graph/TopoSort/Topo.md
     - 树: 
       - 树基础: Graph/Tree/Basic/Basic.md
