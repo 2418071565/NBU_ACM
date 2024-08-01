@@ -34,46 +34,73 @@
 
 ## **拓扑排序**
 
-我用数组 $deg[]$ 记录一个点的入度，用邻接表的形式存图。
+我用数组 $deg[]$ 记录一个点的入度，用$vector$建立邻接表存图。
 
 我们从第入度为 $0$ 的节点开始，删除该顶点，并删除该顶点所有的出边。重复该步骤直到删除所有顶点。
 
 我们在删除边时不必要真的删除，我们只需将该边的终点的入度减 $1$ 即可。因为我们在拓扑排序过程中，只关心一个点当前是否有前驱，当 $deg[u]=0$ 时，代表一个点没有前驱，就可以将其排到当前拓扑序的下一个位置。
 
-实现上述过程用栈或队列都可以。
+实现上述过程用栈（DFS）或队列（BFS）都可以。
 
+**基于BFS的拓扑排序**
 ```cpp
-void topo()
-{
-	queue<int> que;
-	vector<int> ans;	//记录拓扑序
-	// 将一开始入度为0的点加入到队列中
-	for(int i = 1;i <= n;++i)
-		if(!deg[i])
-		{
-			que.push(i);
-			ans.push_back(i);
-		}
+vector<int> topos;	//记录拓扑序
 
-	while(!que.empty())
-	{
+bool bfs_topo() {
+	queue<int> que;
+	for(int i = 1;i <= n;++i)
+		if(!deg[i]) que.push(i); // 先把所有入度为0的点入队
+
+	while(!que.empty()){
 		int u = que.front();
 		que.pop();
-		for(auto& v:g[u])
-		{
+		ans.push_back(u);
+		for(auto& v:g[u]) {
 			// 终点的入度减1，相当于删掉这条边
 			deg[v]--;
 
             // 删除之后入度为0，说明v已经没有前驱将其加入队列和拓扑序中
-			if(!deg[v])
-			{
-				que.push(v);
-				ans.push_back(v);
-			}
+			if(!deg[v]) que.push(v);
 		}
 	}
+
+	// 如果拓扑序中每一个点都存在，证明拓扑序存在，否则拓扑序不存在
+	// 可以自行模拟，如果有环存在，环内的每一个点都无法入队处理，必定会有多余节点没有进入拓扑排序
+	if(topos.size() == n) return true;
+	return false;
 }
 ```
+
+**基于DFS的拓扑排序**
+
+```cpp
+stack<int> topos; // 保存拓扑序的逆序
+int vis[MAX]; // 记录每个节点的访问情况，0代表未访问，1代表正在访问，-1代表访问结束
+
+bool dfs(int u) {
+	vis[u] = 1;
+	for(auto v : g[u]) {
+		if(vis[v] == 1) return false; // 后一个节点正在访问，说明存在有向环，该图不存在拓扑序
+		if(!vis[v] && !dfs(v)) return false; // 后一个节点未访问，但是后续出现了不能完成拓扑排序的情况，也代表该图无拓扑排序
+	}
+
+	vis[u] = -1;
+	topos.push(u);
+	return true;
+}
+
+void topo() {
+	for(int i = 1; i <= n; i ++ ) {
+		if(!vis[i] && deg[i] == 0) dfs(i);
+	} // 必须对每一个入度为0的节点进行dfs才能得到最终的拓扑序
+}
+```
+
+要打印拓扑排序，只需要按出队的顺序、弹出栈的顺序打印所有点即可
+
+如果仅要输出字典序最大（最小）的拓扑排序，优先考虑使用BFS实现拓扑排序。将队列换成优先队列即可。
+
+如果要按字典顺序打印所有拓扑排序，优先考虑DFS实现拓扑排序。可以结合打印全排列的操作，并且同时回溯每个节点的入度和访问情况，就可以和全排列一样生成拓扑排序。
 
 ## **利用拓扑排序找环**
 
