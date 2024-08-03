@@ -39,6 +39,7 @@ nav:
     - 图的存储: Graph/StorageOfGraphs/Storage.md
     - 图的遍历: Graph/TraversalOfGraphs/Traversal.md
     - 拓朴排序: Graph/TopoSort/Topo.md
+    - 最短路: Graph/ShortestPath/ShortestPath.md
     - 树: 
       - 树基础: Graph/Tree/Basic/Basic.md
       - 最小生成树: Graph/Tree/MST/MST.md
