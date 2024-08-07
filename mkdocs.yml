@@ -7,8 +7,7 @@ edit_uri: edit/master/docs
 nav:
   - 主页: index.md
   - 算法: 
-    - 二分:
-      - 整数二分: Algorithm/BinarySearch/Integer/Integer.md
+    - 二分: Algorithm/BinarySearch/BinarySearch.md
     - 动态规划:
       - 背包问题: Algorithm/DP/Knapsack/Knapsack.md
     - 倍增: Algorithm/BinaryLifting/BinaryLifting.md
@@ -26,7 +25,6 @@ nav:
     - 哈希表: DS/HTable/HTable.md
     - 并查集: DS/UnionFind/UF.md
     - 分块: DS/Block/Block.md
-    - 线段树: DS\Block\Block.md
     - 树状数组: 
       - 树状数组: DS/BIT/BIT.md
       - 二维树状数组: DS/BIT/2_BIT.md
@@ -39,7 +37,9 @@ nav:
       - 吉如一线段树: DS/SegTr/JRYSegTr.md
   - 图论: 
     - 图的存储: Graph/StorageOfGraphs/Storage.md
+    - 图的遍历: Graph/TraversalOfGraphs/Traversal.md
     - 拓朴排序: Graph/TopoSort/Topo.md
+    - 最短路: Graph/ShortestPath/ShortestPath.md
     - 树: 
       - 树基础: Graph/Tree/Basic/Basic.md
       - 最小生成树: Graph/Tree/MST/MST.md
