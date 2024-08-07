@@ -1,4 +1,4 @@
-repo_url: https://github.com/2418071565/2418071565.github.io.git
+repo_url: https://github.com/2418071565/2418071565.github.io
 site_name: NBU ACM
 
 copyright: "CopyRight &copy CYB"
@@ -123,7 +123,7 @@ extra_css:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/2418071565
+      link: https://github.com/2418071565/2418071565.github.io
     - icon: fontawesome/solid/paper-plane
       link: mailto:idlecyb@163.com
 
