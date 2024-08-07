@@ -43,6 +43,7 @@ nav:
     - 树: 
       - 树基础: Graph/Tree/Basic/Basic.md
       - 最小生成树: Graph/Tree/MST/MST.md
+      - 树链剖分: Graph/Tree/hld/hld.md
   - 数学:
     - 计算几何:
       - 二维计算几何基础: Math/Geometry/2DGeometry/2D.md
