@@ -1,4 +1,4 @@
-name: Publish Work Flow
+name: Publish Site Work Flow 
 on:
   push:
     branches:
@@ -26,4 +26,4 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install mkdocs-material 
-      - run: mkdocs gh-deploy --force
+      - run: mkdocs gh-pages --force
