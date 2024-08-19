@@ -86,6 +86,8 @@ nav:
 
 完成这两步就可以正常的进行博客编写了。
 
+一些好看的效果可以参考 [Material for MkDocs 官方文档](https://squidfunk.github.io/mkdocs-material/)
+
 ### **一些规范**
 
 为了增加文档的可读性，这里对文档提出以下几点规范：
