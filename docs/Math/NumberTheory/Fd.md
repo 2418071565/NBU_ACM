@@ -69,26 +69,29 @@ $$
 
 ### **定理4**
 
-对任意整数$a、b$和$p$，如果$gcd(a,p)=1$且$gcd(b,p)=1$，则$gcd(ab,p)=1$
+对任意整数 $a、b$ 和$p$，如果$gcd(a,p)=1$且$gcd(b,p)=1$，则$gcd(ab,p)=1$
 
 由此可得，对于任意整数$n_1,n_2,n_3\dots n_k$ ，如果对任意$i\ne j$，都有$gcd(n_i,n_j)=1$，则称整数 $n_1,n_2,n_3\dots n_k$**两两互质**。
 
 ## **唯一因子分解定理**
 
-合数$a$仅能以一种方式写成如下乘积形式：
+合数 $a$ 仅能以一种方式写成如下乘积形式：
 
 $$
-a=P^{e_1}_1P^{e_2}_2\cdots P^{e_r}_r
+a=P^{e_1}_1 P^{e_2}_2\cdots P^{e_r}_r
 $$
 
-其中$P_i$为素数，$P_1<P_2<P_3\cdots <P_r$，且$e_i$为正整数。
+其中 $P_i$ 为素数，$P_1<P_2<P_3\cdots <P_r$，且 $e_i$ 为正整数。
 
 ## **模运算**
-定义：设$a,b\in Z$且$b>0$,如果$q,r\in Z$满足$a=qb+r$且$0\le r<b$则称$a$模$b$等于$r$记作
+定义：设 $a,b\in Z$ 且 $b>0$,如果 $q,r\in Z$ 满足 $a=qb+r$ 且 $0\le r<b$ ，$a$ 模 $b$ 等于 $r$ 记作
+
 $$
 a\space mod \space b=r
 $$
+
 - 负数取模：将 $a$ 不断的加上 $b$ 直到结果大于 $0$ ，这个结果就是模运算的结果
+  
 ### **模运算的性质**
 
 - $b\mid a\Leftrightarrow a\space mod\space b=0$
@@ -96,3 +99,28 @@ $$
 -  $(a-b)mod\space n=(a\space mod \space n-b\space mod\space n)mod\space n$
 -  $(a\times  b)mod\space n=(a\space mod \space n\times b\space mod\space n)mod\space n$
 - 除法不具有这样的性质
+
+
+## **积性函数**
+
+### **定义**
+
+**数论函数：**指定义域为正整数的函数。数论函数也可以视作一个数列。
+
+若函数 $f(n)$ 满足 $f(1) = 1$ 且对于任意两个互质的整数 $a,b$，有 $f(ab) = f(a)f(b)$，则 $f(n)$ 为**积性函数**。
+
+
+若函数 $f(n)$ 满足 $f(1) = 1$ 且对于任意两个整数 $a,b$，有 $f(ab) = f(a)f(b)$，则 $f(n)$ 为**完全积性函数**。
+
+### **性质**
+
+若 $f(x)$ 和 $g(x)$ 都是积性函数，则一下函数 $h(x)$ 也是积性函数：
+
+$$
+\begin{matrix}
+h(x) =&f(x^p)\\
+h(x) =&f^p(x)\\
+h(x) =&f(x)g(x)\\
+h(x) =&\sum_{d\mid x}f(d)g(\frac{x}{d})
+\end{matrix}
+$$
